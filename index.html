@@ -4,11 +4,105 @@
         <meta charset="UTF-8">
         <title>Страница КПТ-дневника</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="author" content="Olga Ch">
+        <meta name="author" content="OlgaCh">
+        <meta name="keywords" content="дневник, КПТ, когнитивно-поведенческая терапия, КПТ-дневник">
+        <meta name="description" content="Шаблон для заполнения дневника согласно методам КПТ-терапии.">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet"  href="/">
+        <link rel="stylesheet"  href="">
     </head>
     <body>
-        <div>Hello</div>
+        <header id="header">
+            <h1>Запись в КПТ-дневник</h1>
+        </header>
+        <main id="mainContainer">
+            <div class="language-menu">
+                <button type="button" class="btn-language-change">
+                    <img src="images/globe.png" alt="Иконка-глобус">
+                </button>
+                <div class="language-menu-choice">
+                    <a href="" class="language-link is-language-active">Ru</a>
+                    <a href="" class="language-link">Kz</a>
+                    <a href="" class="language-link">En</a>
+                </div>
+            </div>
+            <section class="diary-section">
+                <h2 class="diary-section-header">Ситуация</h2>
+                <div class="user-answer">
+                    <div class="user-answer-info">?</div>
+                    <textarea class="user-answer-text" placeholder="Подробно опишите ситуацию, которая заставляет вас испытывать негативные эмоции."></textarea>
+                </div>
+            </section>
+            <section class="diary-section">
+                <h2 class="diary-section-header">Эмоции</h2>
+                <div class="user-answer">
+                    <div class="user-answer-info">?</div>
+                    <table class="user-answer-table table-emotions">
+                        <tr>
+                            <th>Эмоция</th>
+                            <th>Сила эмоции</th>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                    </table>
+                    <button type="button"><span>+</span>Добавить строку</button>
+                </div>
+            </section>
+            <section class="diary-section">
+                <h2 class="diary-section-header">Телесная реакция</h2>
+                <div class="user-answer">
+                    <div class="user-answer-info">?</div>
+                    <textarea class="user-answer-text" placeholder="Какие физические ощущения вы испытываете?"></textarea>
+                </div>
+            </section>
+            <section class="diary-section">
+                <h2 class="diary-section-header">Поведение</h2>
+                <div class="user-answer">
+                    <div class="user-answer-info">?</div>
+                    <textarea class="user-answer-text" placeholder="Как вы себя ведете? Что вы делаете?"></textarea>
+                </div>
+            </section>
+            <section class="diary-section">
+                <h2 class="diary-section-header">Ошибки мышления</h2>
+                <div class="user-answer">
+                    <div class="user-answer-info">?</div>
+                    <table class="user-answer-table table-distortion">
+                        <tr>
+                            <th>Эмоция</th>
+                            <th>Сила эмоции</th>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                        <tr>
+                            <td>Эмоция</td>
+                            <td>%</td>
+                        </tr>
+                    </table>
+                    <button type="button"><span>+</span>Добавить строку</button>
+                </div>
+            </section>
+
+        </main>
+        <footer id="footer">
+            Дизайн веб-станицы создан и реализован OlgaCH
+            Github: https://github.com/RandMPop 
+            Почта: olgachfrontend@gmail.com
+            Телеграм: t.me/olgapeach256
+        </footer>
     </body>
 </html>

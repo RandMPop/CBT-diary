@@ -1,7 +1,7 @@
 #header{
     background-color: #F9B179;
     color:#2D3250;
-    height: 12vh;
+    height: 10vh;
     min-height: 50px;
     display:flex;
     margin: 0 0 1vh;
@@ -14,7 +14,7 @@
 }
 #mainContainer{
     margin:0 3%;
-    
+    /* border: 1px solid; */
 }
 #footer{
     background-color: #2D3250;

@@ -12,9 +12,16 @@
 .header-text{
     margin: 0 0 2% 2%;
 }
+#language-menu{
+    display: flex;
+    height: 6vh;
+    min-height: 3rem;
+    background-color: #676F9D;
+    border:none;
+    padding: 0;
+}
 #mainContainer{
     margin:0 3%;
-    /* border: 1px solid; */
 }
 #footer{
     background-color: #2D3250;

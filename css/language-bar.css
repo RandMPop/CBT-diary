@@ -1,9 +1,11 @@
 .language-menu-choice{
     width: 85%;
-    background-color: #676F9D;
+    /* background-color: #676F9D; */
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    border: none;
+    /* visibility: hidden; */
 }
 .btn-language-change{
     background-color: #424769;
@@ -16,7 +18,9 @@
     padding: 0;
 }
 .btn-language-change-img{
-    width: 85%;
+    /* width: 85%; */
+    height: 70%;
+    width: auto;
 }
 .language-link{
     font-size: 1.8rem;

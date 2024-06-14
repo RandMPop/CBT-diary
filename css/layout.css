@@ -1,10 +1,10 @@
 #header{
     background-color: #F9B179;
     color:#2D3250;
-    height: 10vh;
+    height: 12vh;
     min-height: 50px;
     display:flex;
-    margin: 0 0 1vh;
+    margin: 0 0 2vh;
     align-items: center;
     border-bottom-right-radius:25% 100%;
     box-shadow: 0 3px 3px hsla(0, 0%, 0%, 0.312);
@@ -14,11 +14,12 @@
 }
 #language-menu{
     display: flex;
-    height: 6vh;
+    height: 8vh;
     min-height: 3rem;
     background-color: #676F9D;
     border:none;
     padding: 0;
+    /* visibility: hidden; */
 }
 #mainContainer{
     margin:0 3%;

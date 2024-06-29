@@ -1,0 +1,36 @@
+.pop-up-info{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: #2D3250;
+    border: 5px solid #F9B179;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 100vh;
+    z-index: 10;
+    padding: 2% 5%;
+    overflow:scroll;
+    /* display: none; */
+}
+.pop-up-btn-close{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #F9B179;
+    width:10%;
+    padding: 0 2% 1% 0;
+    text-align:right;
+    border:none;
+    border-bottom-left-radius:100% 100%;
+    color:#2D3250;
+}
+.pop-up-info-header{
+    font-style: italic;
+}
+.pop-up-info-paragraph{
+    text-indent: 15px;
+    text-align: justify;
+    font-size: 1.1rem;
+}

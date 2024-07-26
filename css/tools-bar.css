@@ -1,11 +1,25 @@
+.language-menu{
+    display: flex;
+    background-color: #676F9D;
+    border:none;
+    padding: 0;
+    justify-content: space-between;
+    width:100%;
+}
+@media screen and (min-width:700px){
+    .language-menu{
+        width:50%;
+        border-radius: 5px;
+        max-width: 500px;
+    }
+}
 .language-menu-choice{
     width: 85%;
-    /* background-color: #676F9D; */
     display: flex;
+    /* display: none; */
     justify-content:space-evenly;
     align-items: center;
     border: none;
-    /* visibility: hidden; */
 }
 .btn-language-change{
     background-color: #424769;
@@ -16,9 +30,10 @@
     border-bottom-left-radius: 50%;
     margin: 0;
     padding: 0;
+    max-width:65px;
+    min-width: fit-content;
 }
 .btn-language-change-img{
-    /* width: 85%; */
     height: 70%;
     width: auto;
 }
@@ -26,6 +41,7 @@
     font-size: 1.8rem;
     background-color: #424769;
     width:15%;
+    max-width:90px;
     min-width: fit-content;
     text-decoration: none;
     text-align: center;
@@ -34,4 +50,16 @@
 .is-language-active{
     color:#2D3250;
     background-color:#F8B17A;
+}
+.btn-info{
+    width: 10%;
+    box-shadow: none;
+    border: none;
+    background-color: #424769;
+    padding: 0;
+    display: none;/*Has to change with language button click. Will be changed later*/
+}
+.btn-info-img{
+    height: 70%;
+    width: auto;
 }

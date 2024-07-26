@@ -1,8 +1,18 @@
-.user-answer{
-    position: relative;
+.diary-section{
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
 }
 .diary-section-header{
     margin: 7% 0 3% 0;
+}
+@media screen and (min-width:700px){
+    .diary-section-header{
+        margin: 2% 0;
+    }
+}
+.user-answer{
+    position: relative;
 }
 .user-answer-info{
     position: absolute;
@@ -46,6 +56,12 @@
     border-radius: 10px;
     max-width:325px;
     font-weight: bold;
+}
+@media screen and (min-width:700px){
+    .save-button{
+        margin-top: 2%;
+        padding:2% 1%;
+    }
 }
 .save-button-warning{
     margin-top:0;

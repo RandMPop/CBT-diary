@@ -9,20 +9,32 @@
     border-bottom-right-radius:25% 100%;
     box-shadow: 0 3px 3px hsla(0, 0%, 0%, 0.312);
 }
+@media screen and (min-width:900px){
+    #header{
+        justify-content: center;
+    }
+}
 .header-text{
     margin: 0 0 2% 2%;
 }
-#language-menu{
+@media screen and (min-width:900px){
+    .header-text{
+        margin: 0;
+    }
+}
+#tools-menu{
     display: flex;
+    flex-direction: row;
     height: 8vh;
     min-height: 3rem;
-    background-color: #676F9D;
-    border:none;
-    padding: 0;
-    /* visibility: hidden; */
+    justify-content: end;
+    /* border:2px magenta solid; */
 }
 #mainContainer{
     margin:0 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #footer{
     background-color: #2D3250;

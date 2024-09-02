@@ -81,15 +81,32 @@
     margin-bottom:1%;
     padding:3% 1%;
     box-shadow: 0px 0px 7px #2D3250;
-    border:none;
+    border: none;
     border-radius: 10px;
-    max-width:325px;
+    max-width: 325px;
     font-weight: bold;
+    transition: 200ms;
+    cursor: pointer;
 }
 @media screen and (min-width:700px){
     .save-button{
         margin-top: 2%;
-        padding:2% 1%;
+        padding: 2% 1%;
+    }
+}
+@media (hover: hover) and (pointer: fine){
+    .save-button:hover{
+        transform: scale(1.1);
+    }
+    .save-button:active{
+        transform: scale(1.0);
+        box-shadow: none;
+    }
+}
+@media (hover: none) and (pointer: coarse){
+    .save-button:active{
+        transform: scale(0.9);
+        box-shadow: none;
     }
 }
 .save-button-warning{

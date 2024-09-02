@@ -35,10 +35,12 @@
     align-items: center;
     justify-content: center;
     color:rgba(255, 255, 255, 0.753);
-    font-size: 1rem;
-}
-.table-emotions-data:hover{
+    font-size: inherit;
+    transition: 200ms;
     cursor: pointer;
+}
+.table-emotions-data:active{
+    border:3px solid #F9B179;
 }
 .table-emotions-percent{
     border:none;
@@ -76,6 +78,25 @@
     align-items: center;
     justify-content: center;
     padding: 3% 0;
+    transition: 200ms;
+    box-shadow: 0px 0px 7px #2D3250;
+}
+@media (hover: hover) and (pointer: fine) {
+    .table-button:hover{
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+    .table-button:active{
+        font-size: 1.1rem;
+        box-shadow: inset 0 0 0 2px #F9B179;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) { /*animation for smartphones only*/
+    .table-button:active{
+        font-size: 1.0rem;
+        box-shadow: inset 0 0 0 2px #F9B179;
+    }
 }
 @media screen and (min-width:700px){
     .table-button{
@@ -92,13 +113,15 @@
     margin: 0 3%;
 }
 .table-distortion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
 }
 .table-distortion-row{
     border-bottom: 1px rgba(255, 255, 255, 0.753) solid;
-    width: 75%;
+    color:rgba(255, 255, 255, 0.753);
+    width: 100%;
     font-size: 1.1rem;
     flex-grow: 1;
     display: flex;
@@ -106,4 +129,10 @@
     justify-content: center;
     font-weight: bold;
     font-style: italic;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+}
+.table-distortion-row:active{
+    border:3px solid #F9B179;
 }

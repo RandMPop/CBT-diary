@@ -81,7 +81,7 @@
     transition: 200ms;
     box-shadow: 0px 0px 7px #2D3250;
 }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) { /*animation for pc*/
     .table-button:hover{
         cursor: pointer;
         font-size: 1.2rem;

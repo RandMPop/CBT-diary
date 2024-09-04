@@ -42,6 +42,10 @@
 .table-emotions-data:active{
     border:3px solid #F9B179;
 }
+.table-emotions-data.is-chosen{
+    font-style: normal;
+    color:white;
+}
 .table-emotions-percent{
     border:none;
     outline: none;

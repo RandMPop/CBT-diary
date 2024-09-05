@@ -11,6 +11,11 @@
     max-width: 800px;
     box-shadow: 0px 0px 7px #2D3250;
 }
+@media screen and (max-width:800px){
+    .pop-up{
+        border-radius: 0%;
+    }
+}
 .pop-up-info{
     background-color: #2D3250;
     border: 5px solid #F9B179;
@@ -55,13 +60,14 @@
     text-align: justify;
     font-size: 1.1rem;
 }
-.pop-up-emotions{
+.pop-up-emotions, .pop-up-distortions{
     background-color: #676F9D;
     display:flex;
     flex-direction: column;
     padding:5% 3%;
     gap:2% 5%;
     min-height: 670px;
+    border: 5px solid #2D3250;
 }
 @media screen and (min-width: 580px){
     .pop-up-emotions{
@@ -69,6 +75,10 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(6,1fr);
     }
+}
+.pop-up-emotions .pop-up-btn-close, .pop-up-distortions .pop-up-btn-close{
+    background-color: #2D3250;
+    color: white;
 }
 .emotion-selection{
     background-color: #2d3250d5;
@@ -80,14 +90,14 @@
     justify-content: space-between;
     padding: 3% 10% 3% 10%;
     border-radius: 15px;
-    box-shadow: 3px 3px 2px 1px #2D3250;
+    box-shadow: 3px 3px 2px 1px hsl(231, 28%, 25%);
     min-width: 220px;
+    cursor: pointer;
 }
 .emotion-selection:active{
     box-shadow:none;
 }
 .emotion-selection-img{
-    /* height: 2.5rem; */
     width: 15%;
     min-width: 53px;
 }

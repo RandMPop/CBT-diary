@@ -42,10 +42,6 @@
 .table-emotions-data:active{
     border:3px solid #F9B179;
 }
-.table-emotions-data.is-chosen{
-    font-style: normal;
-    color:white;
-}
 .table-emotions-percent{
     border:none;
     outline: none;
@@ -139,4 +135,8 @@
 }
 .table-distortion-row:active{
     border:3px solid #F9B179;
+}
+.is-chosen{ /*Style for the chosen table cell. It is at end of the code so it gets priority*/
+    font-style: normal;
+    color:white;
 }

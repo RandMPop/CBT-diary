@@ -63,13 +63,9 @@
 }
 .pop-up-emotions, .pop-up-distortions{
     background-color: #676F9D;
-    /* display:flex; */
-    /* flex-direction: column; */
     padding:0 3%;
     min-height: 670px;
     border: 5px solid #2D3250;
-    /* justify-content: space-between; */
-    /* overflow: scroll; */
 }
 @media screen and (min-width: 580px){
     .pop-up-emotions{
@@ -123,22 +119,14 @@
     font-weight: bold;
     box-sizing: border-box;
     text-align: center;
-    /* cursor: pointer; */
     display:flex;
     align-items: center;
     justify-content: space-between;
-    /* display:grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    'image text button'
-    'info info info'; */
     margin: 4% 0;
     box-shadow: 3px 3px 2px 1px hsl(231, 28%, 25%);
 }
 .is-open-info{
     margin-bottom:0;
-    box-shadow: 0 3px 2px 1px hsl(231, 28%, 25%);
 }
 .distortion-selection-img{
     width: 10%;
@@ -150,7 +138,6 @@
 }
 .distortion-selection-btn{
     width: 15%;
-    /* height:max-content; */
     background-color: transparent;
     border-left:2px solid #676F9D;
     border-right: none;
@@ -160,17 +147,13 @@
     color: white;
     cursor:pointer;
     margin: 0;
-    /* grid-area:button; */
 }
 .distortion-selection-info{
-    /* background-color: #404567; */
     margin: 0;
+    margin-bottom: 3%;
     font-size: 1.1rem;
     padding: 3% 2%;
-    /* border-radius: 10px; */
-    /* grid-area:info; */
 }
-
 .hidden{ /*At the end of the code so that it gets priority*/
     display: none;
 }

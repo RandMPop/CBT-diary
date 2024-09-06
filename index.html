@@ -14,7 +14,7 @@
         <header id="header">
             <h1 class="header-text">Запись в КПТ-дневник</h1>
         </header>
-        <div id="tools-menu">
+        <!-- <div id="tools-menu">
             <button type="button" class="btn-info">
                 <img class="btn-info-img" src="images/help.png" alt="Иконка-вопрос.Информация о дневнике.">
             </button>
@@ -28,7 +28,7 @@
                     <img class="btn-language-change-img" src="images/globe.png" alt="Иконка-глобус.Кнопка для изменения языка.">
                 </button>
             </div>
-        </div>
+        </div> -->
         <main id="mainContainer">
             <section class="diary-section">
                 <h2 class="diary-section-header">Ситуация</h2>
@@ -59,7 +59,7 @@
                            <div class="table-emotions-data"></div>
                            <input class="table-emotions-percent">
                     </div>
-                    <button type="button" class="table-button"><span class="table-button-plus">+</span>Добавить строку</button>
+                    <!-- <button type="button" class="table-button"><span class="table-button-plus">+</span>Добавить строку</button> -->
                 </div>
             </section>
             <div class="pop-up pop-up-info hidden">
@@ -156,90 +156,146 @@
                         <div class="table-distortion-row"></div>
                         <div class="table-distortion-row"></div>
                     </div>
-                    <button type="button" class="table-button">
+                    <!-- <button type="button" class="table-button">
                         <span class="table-button-plus">+</span>
                         Добавить строку
-                    </button>
+                    </button> -->
                 </div>
             </section>
             <div class="pop-up pop-up-distortions hidden">
                 <button type="button" class="pop-up-btn-close">X</button>
                 <div class="distortion-selection-container">
-                    <div class="distortion-selection distortion-filter is-open-info">
+                    <div class="distortion-selection distortion-filter">
                         <img class="distortion-selection-img" src="images/distortion.png"/>
                         <span>Мысленный фильтр</span>
                         <button type="button" class="distortion-selection-btn" >?</button>
                     </div>
-                    <p class="distortion-selection-info">
+                    <p class="distortion-selection-info hidden">
                         Здесь будет объяснение данной когнитивной ошибки.
                     </p>
                 </div>
-                <div class="distortion-selection distortion-black-white">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Черно-белое мышление</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-generalization">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Сверхобобщение</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-mind-reading">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Чтение мыслей</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-carastrophization">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Катастрофизация</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-magnification">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Гиперболизация</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-personalization">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Персонализация</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-comparison">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Сравнение</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-must-tatements">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Долженствования</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-devaluation">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Обесценивание позитивного</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-sadness">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Непереносимость дискомфорта</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
-                <div class="distortion-selection distortion-outrage">
-                    <img class="distortion-selection-img" src="images/distortion.png"/>
-                    <span>Эмоциональное обоснование</span>
-                    <button type="button" class="distortion-selection-btn" >
-                        ?
-                    </button></div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-black-white">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Черно-белое мышление</span>
+                        <button type="button" class="distortion-selection-btn" >?</button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-generalization">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Сверхобобщение</span>
+                        <button type="button" class="distortion-selection-btn" >
+                            ?
+                        </button>
+                    </div>
+                        <p class="distortion-selection-info hidden">
+                            Здесь будет объяснение данной когнитивной ошибки.
+                        </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-mind-reading">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Чтение мыслей</span>
+                        <button type="button" class="distortion-selection-btn">
+                            ?
+                        </button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-carastrophization">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Катастрофизация</span>
+                        <button type="button" class="distortion-selection-btn">?</button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-magnification">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Гиперболизация</span>
+                        <button type="button" class="distortion-selection-btn">?</button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-personalization">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Персонализация</span>
+                        <button type="button" class="distortion-selection-btn">?</button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-comparison">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Сравнение</span>
+                        <button type="button" class="distortion-selection-btn" >
+                            ?
+                        </button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-must-tatements">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Долженствования</span>
+                        <button type="button" class="distortion-selection-btn" >
+                            ?
+                        </button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-devaluation">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Обесценивание позитивного</span>
+                        <button type="button" class="distortion-selection-btn" >
+                            ?
+                        </button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-sadness">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Непереносимость дискомфорта</span>
+                        <button type="button" class="distortion-selection-btn" >
+                            ?
+                        </button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
+                <div class="distortion-selection-container">
+                    <div class="distortion-selection distortion-outrage">
+                        <img class="distortion-selection-img" src="images/distortion.png"/>
+                        <span>Эмоциональное обоснование</span>
+                        <button type="button" class="distortion-selection-btn">?</button>
+                    </div>
+                    <p class="distortion-selection-info hidden">
+                        Здесь будет объяснение данной когнитивной ошибки.
+                    </p>
+                </div>
             </div>
             <div class="pop-up pop-up-info hidden">
                 <button type="button" class="pop-up-btn-close info-btn-close">X</button>
@@ -296,12 +352,12 @@
                         Здесь будет объяснение по правильному заполнению данной части дневника.
                     </p>
             </div>
-            <div class="save-button-container">
+            <!-- <div class="save-button-container">
                 <button class="save-button" type="button">Сохранить файл на устройство</button>
               <p class="save-button-warning">
                 Предупреждение! Необходимо сохранить заполненные данные на устройство. В противном случае они будут утеряны.
               </p>
-            </div>
+            </div> -->
         </main>
         <footer id="footer">
             <p class="footer-info">Дизайн веб-станицы создан и реализован OlgaCH</p>

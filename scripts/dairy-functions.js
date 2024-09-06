@@ -15,7 +15,7 @@ popUpBtnList.forEach( //Adding the same event to all closing buttons
 );
 
 function optionChoice(popUp,elementList,dataList) { 
-    //A function that allows to choose an option on the pop-up and add it to the table
+//A function that allows to choose an option on the pop-up and add it to the table
     let currentElement,currentData; //Variables for the chosen option and the clicked table cell or row
     elementList.forEach((element) => { //An event is added for every option i.e. emotion, distortion
         element.addEventListener("click", () => { //When we click on an option
@@ -36,16 +36,32 @@ function optionChoice(popUp,elementList,dataList) {
 }
 
 const emotionList = document.querySelectorAll(".emotion-selection"); //Selecting all emotion options to add an event
-const emotionDataList = document.querySelectorAll(".table-emotions-data"); //Selecting all table cells for emotions to add an event
+const emotionDataList = document.querySelectorAll(".table-emotions-data");//Selecting all table cells for emotions to add an event
 const popUpEmotion = document.querySelector(".pop-up-emotions"); //Selecting the pop-up with emotions
 optionChoice(popUpEmotion,emotionList,emotionDataList); //Calling a function to fill table cells with chosen content
 
-// const distortionList = document.querySelectorAll(".distortion-selection");//Selecting all distortion options to add an event
-const distortionList = document.querySelectorAll(".distortion-selection span");
-const distortionRowList = document.querySelectorAll(".table-distortion-row"); 
-//Selecting all table rows for distortions to add an event
+const distortionList = document.querySelectorAll(".distortion-selection span");//Selecting all distortion options to add an event
+const distortionRowList = document.querySelectorAll(".table-distortion-row");//Selecting all table rows for distortions to add an event
 const popUpDistortion = document.querySelector(".pop-up-distortions"); //Selecting the pop-up with distortions
 optionChoice(popUpDistortion,distortionList,distortionRowList); //Calling a function to fill table rows with chosen content
+
+let infoDistortionFlag = 1; //A infoDistortionFlag for opening and closing additional info for a distortion
+function openingInfo(){
+    if (infoDistortionFlag === 1){ //If the info is closed
+        this.parentElement.nextElementSibling.classList.remove("hidden"); //the additional info will appear
+        this.parentElement.classList.add("is-open-info"); //the style of the distortion will be modified
+        infoDistortionFlag = 2;//the flag's value will be changed
+    } else if (infoDistortionFlag === 2){ //If the info is opened
+        this.parentElement.nextElementSibling.classList.add("hidden"); //the additional info will disappear
+        this.parentElement.classList.remove("is-open-info");//the style of the distortion will be reversed back to default
+        infoDistortionFlag = 1;//the flag's value will be changed
+    }
+}
+const distortionInfoBtn = document.querySelectorAll(".distortion-selection-btn"); 
+//Selecting all buttons for additional info for a distortion
+distortionInfoBtn.forEach((button) => { //For every button for additional info
+    button.addEventListener("click",openingInfo); //a function for opening and closinf additional info will be added
+});
 
 
 

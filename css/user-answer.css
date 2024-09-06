@@ -13,6 +13,7 @@
 }
 .user-answer{
     position: relative;
+    margin-bottom:2%;
 }
 .user-answer-info{
     position: absolute;

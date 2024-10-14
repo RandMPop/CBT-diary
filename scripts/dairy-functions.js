@@ -63,6 +63,21 @@ distortionInfoBtn.forEach((button) => { //For every button for additional info
     button.addEventListener("click",openingInfo); //a function for opening and closinf additional info will be added
 });
 
+const langChange = document.querySelector(".btn-language-change"); //Selecting a button for a language change
+let isLangOpen = false; //A flag to check if language options are displayed
+function openingLang(){ //A function to open/close language options
+    if (isLangOpen === false){ //If language menu are closed
+        langChange.parentElement.classList.add("is-open"); //Language menu will open
+        langChange.previousElementSibling.style.display = "flex"; // Language options will be shown
+        isLangOpen = true; //language menu will be open
+    } else{ //If language menu are open
+        langChange.parentElement.classList.remove("is-open"); //Language menu will close
+        langChange.previousElementSibling.style.display = "none"; // Language options will be hidden
+        isLangOpen = false; //language menu will be closed
+    }
+}
+langChange.addEventListener("click", openingLang); //An event is added to handle language menu opening/closing
+
 
 
 

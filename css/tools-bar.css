@@ -1,5 +1,10 @@
 .language-menu{
     display: flex;
+    margin: 0 2%;
+}
+
+.language-menu.is-open{
+    /* display: flex; */
     background-color: rgb(103, 111, 157,35%);
     border:none;
     padding: 0;
@@ -7,7 +12,7 @@
     width:100%;
 }
 @media screen and (min-width:700px){
-    .language-menu{
+    .language-menu.is-open{
         width:50%;
         border-radius: 5px;
         max-width: 500px;
@@ -15,7 +20,7 @@
 }
 .language-menu-choice{
     width: 85%;
-    display: flex;
+    display: none;
     justify-content:space-evenly;
     align-items: center;
     border: none;
@@ -73,12 +78,11 @@
     border:3px solid #F8B17A;
 }
 .btn-info{
-    width: 10%;
     box-shadow: none;
     border: none;
     background-color: #424769;
     padding: 0;
-    display: none;/*Has to change with language button click. Will be changed later*/
+    cursor:pointer;
 }
 .btn-info-img{
     height: 70%;

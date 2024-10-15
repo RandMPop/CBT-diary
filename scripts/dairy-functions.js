@@ -2,7 +2,9 @@ const infoButtonList = document.querySelectorAll(".user-answer-info"); //Selecti
 const popUpList = document.querySelectorAll(".pop-up-info"); //Selecting all pop-ups with additional info
 infoButtonList.forEach((infoButton,i) => { //Adding the same event to all "question" button
     infoButton.addEventListener("click",() =>{ //When we click on a corner "question" button
-        popUpList[i].classList.remove("hidden"); //A corresponding pop-up will appear on the screen
+        popUpList[i+1].classList.remove("hidden"); 
+        //A corresponding pop-up will appear on the screen. i+1 to exclude pop-up that opens with info button at the begibibg of the
+        //page
     });
 });
 const popUpBtnList = document.querySelectorAll(".pop-up-btn-close");//Selectig all closing buttons on pop-ups
@@ -63,21 +65,25 @@ distortionInfoBtn.forEach((button) => { //For every button for additional info
     button.addEventListener("click",openingInfo); //a function for opening and closinf additional info will be added
 });
 
+const btnInfo = document.querySelector(".btn-info"); //Selecting a button for an info display
+const generalInfo = document.querySelector(".pop-up.general-info"); //Selecting a pop-up with general info
+btnInfo.addEventListener('click', () => { //When we click on the info button
+    generalInfo.classList.remove("hidden"); //a pop-up appears
+})
+
 const langChange = document.querySelector(".btn-language-change"); //Selecting a button for a language change
 let isLangOpen = false; //A flag to check if language options are displayed
 function openingLang(){ //A function to open/close language options
     if (isLangOpen === false){ //If language menu are closed
         langChange.parentElement.classList.add("is-open"); //Language menu will open
         langChange.previousElementSibling.style.display = "flex"; // Language options will be shown
+        btnInfo.style.display = "none"; //The info button is hidden
         isLangOpen = true; //language menu will be open
     } else{ //If language menu are open
         langChange.parentElement.classList.remove("is-open"); //Language menu will close
         langChange.previousElementSibling.style.display = "none"; // Language options will be hidden
+        btnInfo.style.display = "block"; //The info button is shown
         isLangOpen = false; //language menu will be closed
     }
 }
 langChange.addEventListener("click", openingLang); //An event is added to handle language menu opening/closing
-
-
-
-

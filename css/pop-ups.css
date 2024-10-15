@@ -9,6 +9,7 @@
     width:100%;
     scrollbar-width: none;
     max-width: 800px;
+    min-width: 240px;
     box-shadow: 0px 0px 7px #2D3250;
 }
 @media screen and (max-width:800px){
@@ -60,6 +61,11 @@
     text-indent: 15px;
     text-align: justify;
     font-size: 1.1rem;
+}
+.pop-up.general-info{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .pop-up-emotions, .pop-up-distortions{
     background-color: #676F9D;

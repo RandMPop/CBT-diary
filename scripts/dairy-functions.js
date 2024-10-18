@@ -21,10 +21,8 @@ function optionChoice(popUp,elementList,dataList) {
     let currentElement,currentData; //Variables for the chosen option and the clicked table cell or row
     elementList.forEach((element) => { //An event is added for every option i.e. emotion, distortion
         element.addEventListener("click", () => { //When we click on an option
-            // currentElement = element.querySelector("span").textContent; //It't text will be saved in a variable
-            currentElement = element.textContent;
-            // element.parentElement.classList.add("hidden"); //parent pop-up will be closed
-            popUp.classList.add("hidden");
+            currentElement = element.textContent; //Its text will be saved in a variable
+            popUp.classList.add("hidden"); //and the parent pop-up will be closed
             dataList[currentData].textContent = currentElement;//the chosen cell will be filled with the chosen option
         });
     });
@@ -37,9 +35,11 @@ function optionChoice(popUp,elementList,dataList) {
     });
 }
 
+
+const popUpEmotion = document.querySelector(".pop-up-emotions"); //Selecting the pop-up with emotions
 const emotionList = document.querySelectorAll(".emotion-selection"); //Selecting all emotion options to add an event
 const emotionDataList = document.querySelectorAll(".table-emotions-data");//Selecting all table cells for emotions to add an event
-const popUpEmotion = document.querySelector(".pop-up-emotions"); //Selecting the pop-up with emotions
+const emotionPercentList = document.querySelectorAll(".table-emotions-percent"); //Selecting all table cells for percentage
 optionChoice(popUpEmotion,emotionList,emotionDataList); //Calling a function to fill table cells with chosen content
 
 const distortionList = document.querySelectorAll(".distortion-selection span");//Selecting all distortion options to add an event
@@ -87,3 +87,30 @@ function openingLang(){ //A function to open/close language options
     }
 }
 langChange.addEventListener("click", openingLang); //An event is added to handle language menu opening/closing
+
+
+const addEmotionBtn = document.querySelector(".add-emotion-btn"); //Selecting a button for adding a row to the Emotions table
+const emotionsLimit = 12; //Setting a limit for a number of rows
+let emotionsCount = 3; //Setting a current number of rows
+addEmotionBtn.addEventListener("click", () => { //Addind an event after a click on the button
+    if (emotionsCount < emotionsLimit) { //If the current number of rows is below the limit
+        emotionDataList[emotionsCount].classList.remove('is-data-hidden'); //Then we will add a table cell for an emotions choice
+        emotionPercentList[emotionsCount].classList.remove('is-data-hidden');// And a table cell for am emotion intensity
+        emotionsCount++; //Increasing a variable responsible for how many rows were added
+    } else { //If the number of rows reaches the limit
+        alert('Добавлено максимальное количество строк'); //An alert about that will appear on the screen
+    }
+});
+
+const addDistortionBtn = document.querySelector(".add-distortion-btn"); //Selecting a button for adding a row to the Disrortions table
+const distortionsLimit = 12; //Setting a limit for a number of rows
+let distortionsCount = 3; //Setting a current number of rows
+addDistortionBtn.addEventListener("click", () => { //Addind an event after a click on the button
+    if (distortionsCount < distortionsLimit) {  //If the current number of rows is below the limit
+        distortionRowList[distortionsCount].classList.remove('is-data-hidden'); //Then we will add a table cell for a distortion choice
+        distortionsCount++; //Increasing a variable responsible for how many rows were added
+    } else { //If the number of rows reaches the limit
+        alert('Добавлено максимальное количество строк'); //An alert about that will appear on the screen
+    }
+});
+

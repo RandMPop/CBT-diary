@@ -10,7 +10,7 @@
 }
 .table-emotions{
     grid-template-columns: 50% 50%;
-    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr minmax(45px,1fr);
     grid-auto-rows: 1fr;
     text-align: center;
 }
@@ -114,7 +114,7 @@
 }
 .table-distortion{
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows:1fr minmax(60px,1fr);
     grid-auto-rows: 1fr;
     justify-items: center;
 }
@@ -139,4 +139,7 @@
 .is-chosen{ /*Style for the chosen table cell. It is at end of the code so it gets priority*/
     font-style: normal;
     color:white;
+}
+.is-data-hidden{ /*Style for the hidden rows. It is at end of the code so it gets priority*/
+    display:none;
 }

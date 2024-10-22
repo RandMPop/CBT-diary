@@ -63,13 +63,17 @@
     color:rgba(255, 255, 255, 0.753);
     font-size: 1rem;
 }
-.table-button{
+.table-btn-container{
+    display: flex;
     background-color: rgb(103, 111, 157,35%);
-    color:white;
-    box-shadow: none;
-    border:none;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 7px #2D3250;
+}
+.table-button{
+    background-color: transparent;
+    color:white;
+    border:none;
     width:100%;
     min-height: 2.5rem;
     font-size: 1.1rem;
@@ -79,7 +83,6 @@
     justify-content: center;
     padding: 3% 0;
     transition: 200ms;
-    box-shadow: 0px 0px 7px #2D3250;
 }
 @media (hover: hover) and (pointer: fine) { /*animation for pc*/
     .table-button:hover{
@@ -94,7 +97,6 @@
 
 @media (hover: none) and (pointer: coarse) { /*animation for smartphones only*/
     .table-button:active{
-        font-size: 1.0rem;
         box-shadow: inset 0 0 0 2px #F9B179;
     }
 }
@@ -142,4 +144,7 @@
 }
 .is-data-hidden{ /*Style for the hidden rows. It is at end of the code so it gets priority*/
     display:none;
+}
+.is-button-hidden{
+    display: none;
 }

@@ -90,9 +90,10 @@ langChange.addEventListener("click", openingLang); //An event is added to handle
 
 
 const addEmotionBtn = document.querySelector(".add-emotion-btn"); //Selecting a button for adding a row to the Emotions table
+const deleteEmotionBtn = document.querySelector(".delete-emotion-btn"); //Selecting a button for deleting a row
 const emotionsLimit = 12; //Setting a limit for a number of rows
 let emotionsCount = 3; //Setting a current number of rows
-addEmotionBtn.addEventListener("click", () => { //Addind an event after a click on the button
+addEmotionBtn.addEventListener("click", () => { //Adding an event after a click on the button
     if (emotionsCount < emotionsLimit) { //If the current number of rows is below the limit
         emotionDataList[emotionsCount].classList.remove('is-data-hidden'); //Then we will add a table cell for an emotions choice
         emotionPercentList[emotionsCount].classList.remove('is-data-hidden');// And a table cell for am emotion intensity
@@ -100,9 +101,25 @@ addEmotionBtn.addEventListener("click", () => { //Addind an event after a click 
     } else { //If the number of rows reaches the limit
         alert('Добавлено максимальное количество строк'); //An alert about that will appear on the screen
     }
+    if (emotionsCount > 3) {//If the number of rows is greater than 3,
+        deleteEmotionBtn.classList.remove("is-button-hidden");//a button for row removal appears
+    }
+});
+deleteEmotionBtn.addEventListener("click", () =>{//Adding an event to delete o row of the table after a click
+    if (emotionsCount > 3){ //If number of rows is more than 3
+        emotionsCount--; //We will reduce the count of rows by one
+        emotionDataList[emotionsCount].classList.add('is-data-hidden'); //Then we will remove a table cell for an emotions choice
+        emotionPercentList[emotionsCount].classList.add('is-data-hidden');// And a cell for am emotion intensity
+    } else {
+        alert('Достигнуто минимальное количество строк'); //An alert about minimal number of rows being reached
+    }
+    if (emotionsCount === 3) { //If a number of rows equals 3 (minimal number of rows)
+        deleteEmotionBtn.classList.add("is-button-hidden");//the delete button will be hidden
+    }
 });
 
 const addDistortionBtn = document.querySelector(".add-distortion-btn"); //Selecting a button for adding a row to the Disrortions table
+const deleteDistortionBtn = document.querySelector(".delete-distortion-btn"); //Selecting a button for deleting a row
 const distortionsLimit = 12; //Setting a limit for a number of rows
 let distortionsCount = 3; //Setting a current number of rows
 addDistortionBtn.addEventListener("click", () => { //Addind an event after a click on the button
@@ -111,6 +128,20 @@ addDistortionBtn.addEventListener("click", () => { //Addind an event after a cli
         distortionsCount++; //Increasing a variable responsible for how many rows were added
     } else { //If the number of rows reaches the limit
         alert('Добавлено максимальное количество строк'); //An alert about that will appear on the screen
+    }
+    if (distortionsCount > 3) { //If a number of rows is bigger than 3
+        deleteDistortionBtn.classList.remove("is-button-hidden"); //a delete button for rows will appear
+    }
+});
+deleteDistortionBtn.addEventListener("click", () =>{ //An event for clicking a 'delete row' button
+    if (distortionsCount > 3){ //If there are more than 3 rows
+        distortionsCount--; //the count of rows will be reduced
+        distortionRowList[distortionsCount].classList.add('is-data-hidden'); //the last row will be hidden
+    } else {
+        alert('Достигнуто минимальное количество строк'); //An alert about reaching a minimum number of rows
+    }
+    if (distortionsCount === 3) {//If the number of rows equals 3
+        deleteDistortionBtn.classList.add("is-button-hidden"); //the 'delete' button will be hidden
     }
 });
 

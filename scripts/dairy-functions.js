@@ -35,7 +35,6 @@ function optionChoice(popUp,elementList,dataList) {
     });
 }
 
-
 const popUpEmotion = document.querySelector(".pop-up-emotions"); //Selecting the pop-up with emotions
 const emotionList = document.querySelectorAll(".emotion-selection"); //Selecting all emotion options to add an event
 const emotionDataList = document.querySelectorAll(".table-emotions-data");//Selecting all table cells for emotions to add an event
@@ -104,17 +103,25 @@ addEmotionBtn.addEventListener("click", () => { //Adding an event after a click 
     if (emotionsCount > 3) {//If the number of rows is greater than 3,
         deleteEmotionBtn.classList.remove("is-button-hidden");//a button for row removal appears
     }
+    if (emotionsCount === 12){//When the number of rows reaches maximum
+        addEmotionBtn.classList.add("is-button-hidden"); //the add row button will disappear
+    }
 });
 deleteEmotionBtn.addEventListener("click", () =>{//Adding an event to delete o row of the table after a click
     if (emotionsCount > 3){ //If number of rows is more than 3
         emotionsCount--; //We will reduce the count of rows by one
+        emotionDataList[emotionsCount].textContent = '';//The content of the table cell will be cleared
         emotionDataList[emotionsCount].classList.add('is-data-hidden'); //Then we will remove a table cell for an emotions choice
+        emotionPercentList[emotionsCount].value = '';//The content of the table cell will be cleared
         emotionPercentList[emotionsCount].classList.add('is-data-hidden');// And a cell for am emotion intensity
     } else {
         alert('Достигнуто минимальное количество строк'); //An alert about minimal number of rows being reached
     }
     if (emotionsCount === 3) { //If a number of rows equals 3 (minimal number of rows)
         deleteEmotionBtn.classList.add("is-button-hidden");//the delete button will be hidden
+    }
+    if (emotionsCount === 11){ //When the number of rows equals 11
+        addEmotionBtn.classList.remove("is-button-hidden");//the 'add row' button will appear
     }
 });
 
@@ -132,10 +139,14 @@ addDistortionBtn.addEventListener("click", () => { //Addind an event after a cli
     if (distortionsCount > 3) { //If a number of rows is bigger than 3
         deleteDistortionBtn.classList.remove("is-button-hidden"); //a delete button for rows will appear
     }
+    if (distortionsCount === 12){ //When the number of rows reaches maximum
+        addDistortionBtn.classList.add("is-button-hidden"); //the 'add row' button will disappear
+    }
 });
 deleteDistortionBtn.addEventListener("click", () =>{ //An event for clicking a 'delete row' button
     if (distortionsCount > 3){ //If there are more than 3 rows
         distortionsCount--; //the count of rows will be reduced
+        distortionRowList[distortionsCount].textContent = ''; //the content of the disappeared row will be cleareed
         distortionRowList[distortionsCount].classList.add('is-data-hidden'); //the last row will be hidden
     } else {
         alert('Достигнуто минимальное количество строк'); //An alert about reaching a minimum number of rows
@@ -143,5 +154,12 @@ deleteDistortionBtn.addEventListener("click", () =>{ //An event for clicking a '
     if (distortionsCount === 3) {//If the number of rows equals 3
         deleteDistortionBtn.classList.add("is-button-hidden"); //the 'delete' button will be hidden
     }
+    if (distortionsCount === 11){//When the number of rows equals 11
+        addDistortionBtn.classList.remove("is-button-hidden"); //the 'add row' button will appear
+    }
 });
 
+const saveBtn = document.querySelector(".save-button"); //Selecting a 'save file' button
+saveBtn.addEventListener("click", () =>{ //When we click on a button
+    window.print(); //a window for printing will appear in order to save the page as a pdf-file 
+});

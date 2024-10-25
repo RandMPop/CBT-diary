@@ -94,7 +94,6 @@
         box-shadow: inset 0 0 0 2px #F9B179;
     }
 }
-
 @media (hover: none) and (pointer: coarse) { /*animation for smartphones only*/
     .table-button:active{
         box-shadow: inset 0 0 0 2px #F9B179;

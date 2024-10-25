@@ -1,3 +1,12 @@
+@media print{ /*Saving page as pdf with printing*/
+	* {
+		-webkit-print-color-adjust: exact !important;/*The background-color will stay the same*/   
+		color-adjust: exact !important;              
+	}
+    @page{
+        margin: 0;
+    }
+}
 html{
     font-size: 18px;
     margin:0;
